@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0BF0C1F296B9FB900C762FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C1E296B9FB900C762FA /* AppDelegate.swift */; };
+		F0BF0C21296B9FB900C762FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C20296B9FB900C762FA /* SceneDelegate.swift */; };
+		F0BF0C23296B9FB900C762FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C22296B9FB900C762FA /* ViewController.swift */; };
+		F0BF0C26296B9FB900C762FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BF0C24296B9FB900C762FA /* Main.storyboard */; };
+		F0BF0C28296B9FB900C762FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0BF0C27296B9FB900C762FA /* Assets.xcassets */; };
+		F0BF0C2B296B9FBA00C762FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BF0C29296B9FBA00C762FA /* LaunchScreen.storyboard */; };
+		F0BF0C36296B9FBA00C762FA /* Apple_SymbolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C35296B9FBA00C762FA /* Apple_SymbolsTests.swift */; };
+		F0BF0C40296B9FBA00C762FA /* Apple_SymbolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C3F296B9FBA00C762FA /* Apple_SymbolsUITests.swift */; };
+		F0BF0C42296B9FBA00C762FA /* Apple_SymbolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C41296B9FBA00C762FA /* Apple_SymbolsUITestsLaunchTests.swift */; };
+		F0BF0C50296BA14800C762FA /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C4E296BA14800C762FA /* IconCollectionViewCell.swift */; };
+		F0BF0C53296BD5D200C762FA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BF0C52296BD5D200C762FA /* ViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0BF0C32296B9FBA00C762FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0BF0C13296B9FB900C762FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0BF0C1A296B9FB900C762FA;
+			remoteInfo = "Apple-Symbols";
+		};
+		F0BF0C3C296B9FBA00C762FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0BF0C13296B9FB900C762FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0BF0C1A296B9FB900C762FA;
+			remoteInfo = "Apple-Symbols";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0BF0C1B296B9FB900C762FA /* Apple-Symbols.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple-Symbols.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BF0C1E296B9FB900C762FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0BF0C20296B9FB900C762FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F0BF0C22296B9FB900C762FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0BF0C25296B9FB900C762FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0BF0C27296B9FB900C762FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0BF0C2A296B9FBA00C762FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0BF0C2C296B9FBA00C762FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0BF0C31296B9FBA00C762FA /* Apple-SymbolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apple-SymbolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BF0C35296B9FBA00C762FA /* Apple_SymbolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_SymbolsTests.swift; sourceTree = "<group>"; };
+		F0BF0C3B296B9FBA00C762FA /* Apple-SymbolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Apple-SymbolsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BF0C3F296B9FBA00C762FA /* Apple_SymbolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_SymbolsUITests.swift; sourceTree = "<group>"; };
+		F0BF0C41296B9FBA00C762FA /* Apple_SymbolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apple_SymbolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0BF0C4E296BA14800C762FA /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0BF0C52296BD5D200C762FA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0BF0C18296B9FB900C762FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0BF0C2E296B9FBA00C762FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0BF0C38296B9FBA00C762FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0BF0C12296B9FB900C762FA = {
+			isa = PBXGroup;
+			children = (
+				F0BF0C1D296B9FB900C762FA /* Apple-Symbols */,
+				F0BF0C34296B9FBA00C762FA /* Apple-SymbolsTests */,
+				F0BF0C3E296B9FBA00C762FA /* Apple-SymbolsUITests */,
+				F0BF0C1C296B9FB900C762FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0BF0C1C296B9FB900C762FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF0C1B296B9FB900C762FA /* Apple-Symbols.app */,
+				F0BF0C31296B9FBA00C762FA /* Apple-SymbolsTests.xctest */,
+				F0BF0C3B296B9FBA00C762FA /* Apple-SymbolsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0BF0C1D296B9FB900C762FA /* Apple-Symbols */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF0C1E296B9FB900C762FA /* AppDelegate.swift */,
+				F0BF0C20296B9FB900C762FA /* SceneDelegate.swift */,
+				F0BF0C52296BD5D200C762FA /* ViewModel.swift */,
+				F0BF0C22296B9FB900C762FA /* ViewController.swift */,
+				F0BF0C4E296BA14800C762FA /* IconCollectionViewCell.swift */,
+				F0BF0C24296B9FB900C762FA /* Main.storyboard */,
+				F0BF0C27296B9FB900C762FA /* Assets.xcassets */,
+				F0BF0C29296B9FBA00C762FA /* LaunchScreen.storyboard */,
+				F0BF0C2C296B9FBA00C762FA /* Info.plist */,
+			);
+			path = "Apple-Symbols";
+			sourceTree = "<group>";
+		};
+		F0BF0C34296B9FBA00C762FA /* Apple-SymbolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF0C35296B9FBA00C762FA /* Apple_SymbolsTests.swift */,
+			);
+			path = "Apple-SymbolsTests";
+			sourceTree = "<group>";
+		};
+		F0BF0C3E296B9FBA00C762FA /* Apple-SymbolsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0BF0C3F296B9FBA00C762FA /* Apple_SymbolsUITests.swift */,
+				F0BF0C41296B9FBA00C762FA /* Apple_SymbolsUITestsLaunchTests.swift */,
+			);
+			path = "Apple-SymbolsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0BF0C1A296B9FB900C762FA /* Apple-Symbols */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0BF0C45296B9FBA00C762FA /* Build configuration list for PBXNativeTarget "Apple-Symbols" */;
+			buildPhases = (
+				F0BF0C17296B9FB900C762FA /* Sources */,
+				F0BF0C18296B9FB900C762FA /* Frameworks */,
+				F0BF0C19296B9FB900C762FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Apple-Symbols";
+			productName = "Apple-Symbols";
+			productReference = F0BF0C1B296B9FB900C762FA /* Apple-Symbols.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0BF0C30296B9FBA00C762FA /* Apple-SymbolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0BF0C48296B9FBA00C762FA /* Build configuration list for PBXNativeTarget "Apple-SymbolsTests" */;
+			buildPhases = (
+				F0BF0C2D296B9FBA00C762FA /* Sources */,
+				F0BF0C2E296B9FBA00C762FA /* Frameworks */,
+				F0BF0C2F296B9FBA00C762FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0BF0C33296B9FBA00C762FA /* PBXTargetDependency */,
+			);
+			name = "Apple-SymbolsTests";
+			productName = "Apple-SymbolsTests";
+			productReference = F0BF0C31296B9FBA00C762FA /* Apple-SymbolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0BF0C3A296B9FBA00C762FA /* Apple-SymbolsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0BF0C4B296B9FBA00C762FA /* Build configuration list for PBXNativeTarget "Apple-SymbolsUITests" */;
+			buildPhases = (
+				F0BF0C37296B9FBA00C762FA /* Sources */,
+				F0BF0C38296B9FBA00C762FA /* Frameworks */,
+				F0BF0C39296B9FBA00C762FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0BF0C3D296B9FBA00C762FA /* PBXTargetDependency */,
+			);
+			name = "Apple-SymbolsUITests";
+			productName = "Apple-SymbolsUITests";
+			productReference = F0BF0C3B296B9FBA00C762FA /* Apple-SymbolsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0BF0C13296B9FB900C762FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					F0BF0C1A296B9FB900C762FA = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					F0BF0C30296B9FBA00C762FA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F0BF0C1A296B9FB900C762FA;
+					};
+					F0BF0C3A296B9FBA00C762FA = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F0BF0C1A296B9FB900C762FA;
+					};
+				};
+			};
+			buildConfigurationList = F0BF0C16296B9FB900C762FA /* Build configuration list for PBXProject "Apple-Symbols" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0BF0C12296B9FB900C762FA;
+			productRefGroup = F0BF0C1C296B9FB900C762FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0BF0C1A296B9FB900C762FA /* Apple-Symbols */,
+				F0BF0C30296B9FBA00C762FA /* Apple-SymbolsTests */,
+				F0BF0C3A296B9FBA00C762FA /* Apple-SymbolsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0BF0C19296B9FB900C762FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BF0C2B296B9FBA00C762FA /* LaunchScreen.storyboard in Resources */,
+				F0BF0C28296B9FB900C762FA /* Assets.xcassets in Resources */,
+				F0BF0C26296B9FB900C762FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0BF0C2F296B9FBA00C762FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0BF0C39296B9FBA00C762FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0BF0C17296B9FB900C762FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BF0C53296BD5D200C762FA /* ViewModel.swift in Sources */,
+				F0BF0C23296B9FB900C762FA /* ViewController.swift in Sources */,
+				F0BF0C1F296B9FB900C762FA /* AppDelegate.swift in Sources */,
+				F0BF0C21296B9FB900C762FA /* SceneDelegate.swift in Sources */,
+				F0BF0C50296BA14800C762FA /* IconCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0BF0C2D296B9FBA00C762FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BF0C36296B9FBA00C762FA /* Apple_SymbolsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0BF0C37296B9FBA00C762FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0BF0C40296B9FBA00C762FA /* Apple_SymbolsUITests.swift in Sources */,
+				F0BF0C42296B9FBA00C762FA /* Apple_SymbolsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0BF0C33296B9FBA00C762FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0BF0C1A296B9FB900C762FA /* Apple-Symbols */;
+			targetProxy = F0BF0C32296B9FBA00C762FA /* PBXContainerItemProxy */;
+		};
+		F0BF0C3D296B9FBA00C762FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0BF0C1A296B9FB900C762FA /* Apple-Symbols */;
+			targetProxy = F0BF0C3C296B9FBA00C762FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0BF0C24296B9FB900C762FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0BF0C25296B9FB900C762FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0BF0C29296B9FBA00C762FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0BF0C2A296B9FBA00C762FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0BF0C43296B9FBA00C762FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0BF0C44296B9FBA00C762FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0BF0C46296B9FBA00C762FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUCFCD268G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Apple-Symbols/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carolinedavis.Apple-Symbols";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0BF0C47296B9FBA00C762FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUCFCD268G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Apple-Symbols/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carolinedavis.Apple-Symbols";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F0BF0C49296B9FBA00C762FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUCFCD268G;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carolinedavis.Apple-SymbolsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apple-Symbols.app/Apple-Symbols";
+			};
+			name = Debug;
+		};
+		F0BF0C4A296B9FBA00C762FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUCFCD268G;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carolinedavis.Apple-SymbolsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Apple-Symbols.app/Apple-Symbols";
+			};
+			name = Release;
+		};
+		F0BF0C4C296B9FBA00C762FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUCFCD268G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carolinedavis.Apple-SymbolsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Apple-Symbols";
+			};
+			name = Debug;
+		};
+		F0BF0C4D296B9FBA00C762FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PUCFCD268G;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.carolinedavis.Apple-SymbolsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Apple-Symbols";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0BF0C16296B9FB900C762FA /* Build configuration list for PBXProject "Apple-Symbols" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0BF0C43296B9FBA00C762FA /* Debug */,
+				F0BF0C44296B9FBA00C762FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0BF0C45296B9FBA00C762FA /* Build configuration list for PBXNativeTarget "Apple-Symbols" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0BF0C46296B9FBA00C762FA /* Debug */,
+				F0BF0C47296B9FBA00C762FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0BF0C48296B9FBA00C762FA /* Build configuration list for PBXNativeTarget "Apple-SymbolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0BF0C49296B9FBA00C762FA /* Debug */,
+				F0BF0C4A296B9FBA00C762FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0BF0C4B296B9FBA00C762FA /* Build configuration list for PBXNativeTarget "Apple-SymbolsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0BF0C4C296B9FBA00C762FA /* Debug */,
+				F0BF0C4D296B9FBA00C762FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0BF0C13296B9FB900C762FA /* Project object */;
+}
