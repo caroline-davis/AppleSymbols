@@ -22,7 +22,7 @@ class ViewModel {
 
     let reuseIdentifier = "cell"
 
-    var gameTimeLeft = 10
+    var gameTimeLeft = 7
     var scoreCount = 0
     var isTimerActive = true
 

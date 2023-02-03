@@ -38,9 +38,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if viewModel.icons[Int(indexPath.row)] == viewModel.chosenIcon {
+        if viewModel.gameTimeLeft != 0 && viewModel.icons[Int(indexPath.row)] == viewModel.chosenIcon {
             viewModel.scoreCount += 1
-            viewModel.gameTimeLeft = 10
+            viewModel.gameTimeLeft = 7
             viewModel.timer.invalidate()
             runTimer()
         }
@@ -49,7 +49,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func runTimer() {
         setIcon()
         viewModel.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
-
     }
 
     func setIcon() {
@@ -64,8 +63,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if viewModel.gameTimeLeft > 0 {
             subtitleLabel.text = "Time: \(String(viewModel.gameTimeLeft))"
         } else {
+            // adds gesture to label to restart game
+            let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapFunction))
+                    subtitleLabel.isUserInteractionEnabled = true
+                    subtitleLabel.addGestureRecognizer(tap)
             subtitleLabel.text = "Restart"
-            // add restart button
+            // arrow.triangle.2.circlepath.circle
             viewModel.isTimerActive = false
             viewModel.timer.invalidate()
             scoreLabel.text = "Game Over! You got \(viewModel.scoreCount)"
@@ -73,12 +76,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         scoreLabel.text = "\(viewModel.scoreCount)"
     }
 
-    // to do:
-    // if symbols match change the icon
-    // icons.randomElement() ?? "suit.heart.fill"
-    // add the restart button
-
-
+    @IBAction func tapFunction(sender: UITapGestureRecognizer) {
+        viewModel.gameTimeLeft = 7
+        viewModel.scoreCount = 0
+        updateTimer()
+    }
 
 }
-
