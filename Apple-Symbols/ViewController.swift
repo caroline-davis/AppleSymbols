@@ -33,7 +33,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.reuseIdentifier, for: indexPath as IndexPath) as? IconCollectionViewCell
 
-        cell?.setIcon(iconIndex: self.viewModel.icons[indexPath.row])
+        cell?.setIcon(iconIndex: self.viewModel.icons[indexPath.row], variableValue: 0.5)
         return cell ?? UICollectionViewCell()
     }
 
@@ -54,8 +54,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func setIcon() {
         viewModel.chosenIcon = viewModel.icons.randomElement() ?? "suit.heart.fill"
         let config = UIImage.SymbolConfiguration.preferringMulticolor()
-        let image = UIImage(systemName: viewModel.chosenIcon, withConfiguration: config)
-        iconImageView.image = image
+        if #available(iOS 16.0, *) {
+            let image = UIImage(systemName: viewModel.chosenIcon, variableValue: 0.5, configuration: config)
+            iconImageView.image = image
+        } else {
+            // Fallback on earlier versions
+            let image = UIImage(systemName: viewModel.chosenIcon, withConfiguration: config)
+            iconImageView.image = image
+        }
+
     }
 
     @objc func updateTimer() {
@@ -73,7 +80,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             viewModel.timer.invalidate()
             scoreLabel.text = "Game Over! You got \(viewModel.scoreCount)"
         }
-        scoreLabel.text = "\(viewModel.scoreCount)"
+        scoreLabel.text = "Score: \(viewModel.scoreCount)"
     }
 
     @IBAction func tapFunction(sender: UITapGestureRecognizer) {

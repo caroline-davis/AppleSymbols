@@ -14,9 +14,15 @@ class IconCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func setIcon(iconIndex: String) {
+    func setIcon(iconIndex: String, variableValue: Double) {
         let config = UIImage.SymbolConfiguration.preferringMulticolor()
-        iconView.image = UIImage(systemName: iconIndex, withConfiguration: config)
+        if #available(iOS 16.0, *) {
+            iconView.image = UIImage(systemName: iconIndex, variableValue: variableValue, configuration: config)
+        } else {
+            iconView.image = UIImage(systemName: iconIndex, withConfiguration: config)
+        }
     }
+
+    // once its been clicked on its not 0.5 anymore, then its 1
 
 }

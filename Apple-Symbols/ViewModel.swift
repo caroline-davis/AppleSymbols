@@ -14,8 +14,7 @@ class ViewModel {
     var chosenIcon: String
 
     init() {
-        self.icons = ["suit.heart.fill", "house.fill", "sun.max.fill", "leaf.circle", "timer", "fork.knife.circle.fill", "ladybug.fill", "wand.and.rays", "target", "chart.dots.scatter", "timelapse", "phone.and.waveform", "shower.fill", "wifi.circle", "suitcase.rolling", "signpost.right.and.left.fill", "fish.circle.fill", "tree", "mountain.2", "mug", "key.horizontal", "brain.head.profile",
-                      "calendar.badge.plus", "homekit"]
+        self.icons = ["suit.heart.fill", "house.fill", "sun.max.fill", "leaf.circle", "timer", "fork.knife.circle.fill", "ladybug.fill", "wand.and.rays", "target", "chart.dots.scatter", "timelapse", "phone.and.waveform", "shower.fill", "wifi.circle", "suitcase.rolling", "signpost.right.and.left.fill", "fish.circle.fill", "mic.and.signal.meter.fill", "mountain.2", "mug", "key.horizontal", "brain.head.profile", "calendar.badge.plus", "homekit", "minus.plus.batteryblock.exclamationmark", "handbag.fill"]
 
         self.chosenIcon = icons.randomElement() ?? "suit.heart.fill"
     }
