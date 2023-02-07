@@ -14,6 +14,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var symbolImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
 
     let viewModel = ViewModel()
@@ -51,6 +52,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         viewModel.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
 
+    func alarmSymbol(value: Double) {
+        let config = UIImage.SymbolConfiguration.preferringMulticolor()
+        if #available(iOS 16.0, *) {
+            let image = UIImage(systemName: "alarm.waves.left.and.right", variableValue: value, configuration: config)
+            symbolImageView.image = image
+        } else {
+            // Fallback on earlier versions
+            let image = UIImage(systemName: "alarm.waves.left.and.right")
+            symbolImageView.image = image
+        }
+    }
+
     func setIcon() {
         viewModel.chosenIcon = viewModel.icons.randomElement() ?? "suit.heart.fill"
         let config = UIImage.SymbolConfiguration.preferringMulticolor()
@@ -67,6 +80,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @objc func updateTimer() {
         viewModel.gameTimeLeft -= 1
+
+        viewModel.gameTimeLeft > 5 ? alarmSymbol(value: 1.0) :
+        viewModel.gameTimeLeft <= 5 && viewModel.gameTimeLeft > 2 ? alarmSymbol(value: 0.5) : alarmSymbol(value: 0.0)
+
         if viewModel.gameTimeLeft > 0 {
             subtitleLabel.text = "Time: \(String(viewModel.gameTimeLeft))"
         } else {
@@ -75,10 +92,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     subtitleLabel.isUserInteractionEnabled = true
                     subtitleLabel.addGestureRecognizer(tap)
             subtitleLabel.text = "Restart"
-            // arrow.triangle.2.circlepath.circle
-            viewModel.isTimerActive = false
             viewModel.timer.invalidate()
-            scoreLabel.text = "Game Over! You got \(viewModel.scoreCount)"
         }
         scoreLabel.text = "Score: \(viewModel.scoreCount)"
     }
@@ -86,7 +100,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func tapFunction(sender: UITapGestureRecognizer) {
         viewModel.gameTimeLeft = 7
         viewModel.scoreCount = 0
-        updateTimer()
+        runTimer()
     }
 
 }

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M5c-6a-hEW">
-                                <rect key="frame" x="30" y="279.5" width="354" height="532.5"/>
+                                <rect key="frame" x="30" y="314.5" width="354" height="497.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bCh-fm-bW7">
                                     <size key="itemSize" width="150" height="150"/>
@@ -64,8 +64,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y0g-rb-uLP" userLabel="Time Stack View">
+                                <rect key="frame" x="344" y="60" width="50" height="58.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzI-tw-xVa">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4rG-2f-XJ5">
+                                        <rect key="frame" x="0.0" y="18.5" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HfP-dq-QoF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="HuB-fH-uhw"/>
+                                            <constraint firstAttribute="width" constant="50" id="bhi-bY-897"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aVr-mb-Oov">
-                                <rect key="frame" x="10" y="88.5" width="394" height="161"/>
+                                <rect key="frame" x="10" y="123.5" width="394" height="161"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speedy Symbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOb-ea-jOT">
                                         <rect key="frame" x="75" y="0.0" width="244" height="39"/>
@@ -88,26 +107,20 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzI-tw-xVa">
-                                <rect key="frame" x="339" y="60" width="48" height="18.5"/>
-                                <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sqG-aP-4gb" firstAttribute="centerX" secondItem="M5c-6a-hEW" secondAttribute="centerX" id="3pr-uX-hMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y0g-rb-uLP" secondAttribute="trailing" constant="20" id="40r-by-KdQ"/>
                             <constraint firstItem="aVr-mb-Oov" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ARz-fX-ztd"/>
                             <constraint firstItem="M5c-6a-hEW" firstAttribute="top" secondItem="aVr-mb-Oov" secondAttribute="bottom" constant="30" id="CwK-o9-Y2V"/>
                             <constraint firstItem="sqG-aP-4gb" firstAttribute="top" secondItem="M5c-6a-hEW" secondAttribute="bottom" constant="8" symbolic="YES" id="Dfi-Qc-ESw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vzI-tw-xVa" secondAttribute="trailing" multiplier="1.07" id="Jvl-NO-ni9"/>
                             <constraint firstItem="aVr-mb-Oov" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Kq3-n9-419"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M5c-6a-hEW" secondAttribute="trailing" constant="30" id="Lzp-o7-E3p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M5c-6a-hEW" secondAttribute="bottom" constant="50" id="RTt-tl-mTu"/>
-                            <constraint firstItem="aVr-mb-Oov" firstAttribute="top" secondItem="vzI-tw-xVa" secondAttribute="bottom" constant="10" id="fEF-Kl-6AY"/>
-                            <constraint firstItem="vzI-tw-xVa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="gAq-SB-thb"/>
+                            <constraint firstItem="Y0g-rb-uLP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="TdX-Ok-08R"/>
+                            <constraint firstItem="aVr-mb-Oov" firstAttribute="top" secondItem="Y0g-rb-uLP" secondAttribute="bottom" constant="5" id="p2s-rS-EYY"/>
                             <constraint firstItem="M5c-6a-hEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="qNR-4m-txv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aVr-mb-Oov" secondAttribute="trailing" constant="10" id="rh5-4m-b0q"/>
                             <constraint firstItem="sqG-aP-4gb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sai-c9-ft5"/>
@@ -119,10 +132,16 @@
                         <outlet property="instructionsLabel" destination="mu5-Y2-oc4" id="rr8-nN-xnW"/>
                         <outlet property="scoreLabel" destination="sqG-aP-4gb" id="lMp-KV-6CU"/>
                         <outlet property="subtitleLabel" destination="vzI-tw-xVa" id="5SA-nl-GYZ"/>
+                        <outlet property="symbolImageView" destination="4rG-2f-XJ5" id="lTv-r0-q9p"/>
                         <outlet property="titleLabel" destination="MOb-ea-jOT" id="N9S-I9-qZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="egx-2z-cYV">
+                    <connections>
+                        <action selector="tapFunctionWithSender:" destination="BYZ-38-t0r" id="gXR-wx-siq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>

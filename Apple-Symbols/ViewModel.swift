@@ -23,7 +23,6 @@ class ViewModel {
 
     var gameTimeLeft = 7
     var scoreCount = 0
-    var isTimerActive = true
 
     var timer = Timer()
 
