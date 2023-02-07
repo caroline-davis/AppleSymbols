@@ -23,6 +23,4 @@ class IconCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    // once its been clicked on its not 0.5 anymore, then its 1
-
 }

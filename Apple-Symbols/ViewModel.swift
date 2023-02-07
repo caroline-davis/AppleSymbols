@@ -20,6 +20,8 @@ class ViewModel {
     }
 
     let reuseIdentifier = "cell"
+    let alarm = "alarm.waves.left.and.right"
+    let heart = "suit.heart.fill"
 
     var gameTimeLeft = 7
     var scoreCount = 0

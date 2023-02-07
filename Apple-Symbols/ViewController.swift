@@ -17,89 +17,84 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var symbolImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    let viewModel = ViewModel()
+    let vm = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         runTimer()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.viewModel.icons.count
+        return self.vm.icons.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.reuseIdentifier, for: indexPath as IndexPath) as? IconCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: vm.reuseIdentifier, for: indexPath as IndexPath) as? IconCollectionViewCell
 
-        cell?.setIcon(iconIndex: self.viewModel.icons[indexPath.row], variableValue: 0.5)
+        cell?.setIcon(iconIndex: self.vm.icons[indexPath.row], variableValue: 0.5)
         return cell ?? UICollectionViewCell()
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if viewModel.gameTimeLeft != 0 && viewModel.icons[Int(indexPath.row)] == viewModel.chosenIcon {
-            viewModel.scoreCount += 1
-            viewModel.gameTimeLeft = 7
-            viewModel.timer.invalidate()
+        if vm.gameTimeLeft != 0 && vm.icons[Int(indexPath.row)] == vm.chosenIcon {
+            vm.scoreCount += 1
+            vm.gameTimeLeft = 7
+            vm.timer.invalidate()
             runTimer()
         }
     }
 
     func runTimer() {
         setIcon()
-        viewModel.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+        vm.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
 
     func alarmSymbol(value: Double) {
         let config = UIImage.SymbolConfiguration.preferringMulticolor()
         if #available(iOS 16.0, *) {
-            let image = UIImage(systemName: "alarm.waves.left.and.right", variableValue: value, configuration: config)
-            symbolImageView.image = image
+            symbolImageView.image = UIImage(systemName: vm.alarm, variableValue: value, configuration: config)
         } else {
             // Fallback on earlier versions
-            let image = UIImage(systemName: "alarm.waves.left.and.right")
-            symbolImageView.image = image
+            symbolImageView.image = UIImage(systemName: vm.alarm)
         }
     }
 
     func setIcon() {
-        viewModel.chosenIcon = viewModel.icons.randomElement() ?? "suit.heart.fill"
+        vm.chosenIcon = vm.icons.randomElement() ?? vm.heart
         let config = UIImage.SymbolConfiguration.preferringMulticolor()
         if #available(iOS 16.0, *) {
-            let image = UIImage(systemName: viewModel.chosenIcon, variableValue: 0.5, configuration: config)
-            iconImageView.image = image
+            iconImageView.image = UIImage(systemName: vm.chosenIcon, variableValue: 0.5, configuration: config)
         } else {
             // Fallback on earlier versions
-            let image = UIImage(systemName: viewModel.chosenIcon, withConfiguration: config)
-            iconImageView.image = image
+            iconImageView.image = UIImage(systemName: vm.chosenIcon, withConfiguration: config)
         }
 
     }
 
     @objc func updateTimer() {
-        viewModel.gameTimeLeft -= 1
+        vm.gameTimeLeft -= 1
 
-        viewModel.gameTimeLeft > 5 ? alarmSymbol(value: 1.0) :
-        viewModel.gameTimeLeft <= 5 && viewModel.gameTimeLeft > 2 ? alarmSymbol(value: 0.5) : alarmSymbol(value: 0.0)
+        vm.gameTimeLeft > 5 ? alarmSymbol(value: 1.0) :
+        vm.gameTimeLeft <= 5 && vm.gameTimeLeft > 2 ? alarmSymbol(value: 0.5) : alarmSymbol(value: 0.0)
 
-        if viewModel.gameTimeLeft > 0 {
-            subtitleLabel.text = "Time: \(String(viewModel.gameTimeLeft))"
+        if vm.gameTimeLeft > 0 {
+            subtitleLabel.text = "Time: \(String(vm.gameTimeLeft))"
         } else {
             // adds gesture to label to restart game
             let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapFunction))
-                    subtitleLabel.isUserInteractionEnabled = true
-                    subtitleLabel.addGestureRecognizer(tap)
+            subtitleLabel.isUserInteractionEnabled = true
+            subtitleLabel.addGestureRecognizer(tap)
             subtitleLabel.text = "Restart"
-            viewModel.timer.invalidate()
+            vm.timer.invalidate()
         }
-        scoreLabel.text = "Score: \(viewModel.scoreCount)"
+        scoreLabel.text = "Score: \(vm.scoreCount)"
     }
 
     @IBAction func tapFunction(sender: UITapGestureRecognizer) {
-        viewModel.gameTimeLeft = 7
-        viewModel.scoreCount = 0
+        vm.gameTimeLeft = 7
+        vm.scoreCount = 0
         runTimer()
     }
 
