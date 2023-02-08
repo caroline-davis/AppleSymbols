@@ -32,7 +32,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: vm.reuseIdentifier, for: indexPath as IndexPath) as? IconCollectionViewCell
-
         cell?.setIcon(iconIndex: self.vm.icons[indexPath.row], variableValue: 0.5)
         return cell ?? UICollectionViewCell()
     }
@@ -51,33 +50,26 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         vm.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
     }
 
-    func alarmSymbol(value: Double) {
+    func setSymbol(value: Double, symbol: String, imageView: UIImageView) {
         let config = UIImage.SymbolConfiguration.preferringMulticolor()
         if #available(iOS 16.0, *) {
-            symbolImageView.image = UIImage(systemName: vm.alarm, variableValue: value, configuration: config)
+            imageView.image = UIImage(systemName: symbol, variableValue: value, configuration: config)
         } else {
             // Fallback on earlier versions
-            symbolImageView.image = UIImage(systemName: vm.alarm)
+            imageView.image = UIImage(systemName: symbol)
         }
     }
 
     func setIcon() {
         vm.chosenIcon = vm.icons.randomElement() ?? vm.heart
-        let config = UIImage.SymbolConfiguration.preferringMulticolor()
-        if #available(iOS 16.0, *) {
-            iconImageView.image = UIImage(systemName: vm.chosenIcon, variableValue: 0.5, configuration: config)
-        } else {
-            // Fallback on earlier versions
-            iconImageView.image = UIImage(systemName: vm.chosenIcon, withConfiguration: config)
-        }
-
+        setSymbol(value: 0.5, symbol: vm.chosenIcon, imageView: iconImageView)
     }
 
     @objc func updateTimer() {
         vm.gameTimeLeft -= 1
 
-        vm.gameTimeLeft > 5 ? alarmSymbol(value: 1.0) :
-        vm.gameTimeLeft <= 5 && vm.gameTimeLeft > 2 ? alarmSymbol(value: 0.5) : alarmSymbol(value: 0.0)
+        vm.gameTimeLeft > 5 ? setSymbol(value: 1.0, symbol: vm.alarm, imageView: symbolImageView) :
+        vm.gameTimeLeft <= 5 && vm.gameTimeLeft > 2 ? setSymbol(value: 0.5, symbol: vm.alarm, imageView: symbolImageView) : setSymbol(value: 0.0, symbol: vm.alarm, imageView: symbolImageView)
 
         if vm.gameTimeLeft > 0 {
             subtitleLabel.text = "Time: \(String(vm.gameTimeLeft))"
