@@ -68,13 +68,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @objc func updateTimer() {
         vm.gameTimeLeft -= 1
 
+        // Changes the alarms look when the time changes
         vm.gameTimeLeft > 5 ? setSymbol(value: 1.0, symbol: vm.alarm, imageView: symbolImageView) :
         vm.gameTimeLeft <= 5 && vm.gameTimeLeft > 2 ? setSymbol(value: 0.5, symbol: vm.alarm, imageView: symbolImageView) : setSymbol(value: 0.0, symbol: vm.alarm, imageView: symbolImageView)
 
         if vm.gameTimeLeft > 0 {
             subtitleLabel.text = "Time: \(String(vm.gameTimeLeft))"
         } else {
-            // adds gesture to label to restart game
+            // Adds gesture to label to restart game
             let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapFunction))
             subtitleLabel.isUserInteractionEnabled = true
             subtitleLabel.addGestureRecognizer(tap)
